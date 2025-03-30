@@ -4,6 +4,7 @@
 
 - [Oracle Database 19c Linux Deployment](#oracle-database-19c-linux-deployment)
   - [Homelab Specification](#homelab-specification)
+  - [Copy Binary to Oracle Home](#copy-binary-to-oracle-home)
   - [Install Oracle Database 19c](#install-oracle-database-19c)
     - [Automatic Pre-install Setup](#automatic-pre-install-setup)
     - [Set Up Required Directories](#set-up-required-directories)
@@ -22,6 +23,14 @@
 - Host OS: `Oracle Linux 8.10`
 - Host IP: `192.168.128.50`
 - Host name: `Argus-Homelab`
+
+---
+
+## Copy Binary to Oracle Home
+
+```sh
+scp LINUX.X64_193000_db_home.zip oracle@host_ip:/home/oracle/
+```
 
 ---
 
@@ -157,7 +166,7 @@ chmod u+x /home/oracle/scripts/*.sh
 # Switch to the Oracle User
 su - oracle
 # Extract the Installation Files to Oracle Home
-unzip -oq /mnt/hgfs/Softwares/LINUX.X64_193000_db_home.zip -d /u01/app/oracle/product/19.0.0/dbhome_1
+unzip -oq /home/oracle/LINUX.X64_193000_db_home.zip -d /u01/app/oracle/product/19.0.0/dbhome_1
 
 # confirm
 ll /u01/app/oracle/product/19.0.0/dbhome_1
@@ -600,7 +609,7 @@ DATA_DIR="/u02/oradata"
 ORACLE_UNQNAME="cdb1"
 ORACLE_SID="cdb1"
 PDB_NAME="pdb1"
-INSTALLER_ZIP="/mnt/hgfs/Softwares/LINUX.X64_193000_db_home.zip"
+INSTALLER_ZIP="/home/oracle/LINUX.X64_193000_db_home.zip"
 ROOT_USER="root"
 ORACLE_USER="oracle"
 ORACLE_GROUP="oinstall"
