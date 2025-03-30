@@ -1,1 +1,0 @@
-SHOW CON_NAME;
