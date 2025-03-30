@@ -2,4 +2,5 @@
 
 A project to deploy Oracle 19c on AWS ECS
 
-- [Deploy Oracle Database 19c using Docker on RHEL 8.10](./doc/deploy_oracle19c_docker_rhel8.md)
+- [Oracle Database 19c Dockerization](./doc/oracledb19c_docker/oracledb19c_docker.md)
+- [Oracle Database 19c Docker Compose](./doc/oracledb19c_docker_compose/oracledb19c_docker_compose.md)
