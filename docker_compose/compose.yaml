@@ -39,11 +39,6 @@ services:
           memory: 8g
         reservations:
           memory: 4g
-    networks:
-      - oracle-net
 
 volumes:
   oracledata:
-networks:
-  oracle-net:
-    driver: bridge
